@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Примеры - PyHTML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Примеры использования PyHTML</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="features.html">Особенности</a></li>
+                <li><a href="setup.html">Установка</a></li>
+                <li><a href="functions.html">Основные функции</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Пример полного проекта</h2>
+        <pre><code>
+page = html(
+    head(
+        title("Мой проект"),
+        link(href="styles.css"),
+        script(src="app.js")
+    ),
+    body(
+        h1("Добро пожаловать!", style="color:green;"),
+        card("Карточка 1", "Описание 1", "image1.jpg"),
+        card("Карточка 2", "Описание 2", "image2.jpg")
+    )
+)
+save_html("index.html", page)
+        </code></pre>
+    </main>
+    <footer>
+        <p>© 2024 PyHTML. Все права защищены.</p>
+    </footer>
+</body>
+</html>

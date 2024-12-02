@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основные функции - PyHTML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Основные функции PyHTML</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="features.html">Особенности</a></li>
+                <li><a href="setup.html">Установка</a></li>
+                <li><a href="examples.html">Примеры</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Создание HTML</h2>
+        <pre><code>
+h1("Привет, мир!", style="color:blue;")
+p("Это абзац.", class_="text")
+        </code></pre>
+        <h2>Генерация CSS</h2>
+        <pre><code>
+generate_css("styles.css", "body { background-color: #f0f0f0; }")
+        </code></pre>
+        <h2>Генерация JSON</h2>
+        <pre><code>
+generate_json({"status": "success"}, "data.json")
+        </code></pre>
+    </main>
+    <footer>
+        <p>© 2024 PyHTML. Все права защищены.</p>
+    </footer>
+</body>
+</html>

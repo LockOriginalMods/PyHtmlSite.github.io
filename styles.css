@@ -1,0 +1,211 @@
+/* Базовые стили */
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e3f2fd, #f1f8e9);
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Заголовок сайта */
+header {
+    background: linear-gradient(135deg, #0288d1, #01579b);
+    color: #fff;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.7rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: fadeInDown 0.6s ease-in-out;
+    font-weight: 900;
+}
+
+/* Навигация */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0288d1;
+    border-radius: 15px;
+    padding: 1rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2.5rem;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #e3f2fd;
+    transform: scale(1.05);
+}
+
+/* Линия под элементом при наведении */
+nav a::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background: #fff;
+    width: 0;
+    transition: width 0.4s ease;
+    margin: 0 auto;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Основной контент */
+main {
+    flex: 1;
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    animation: fadeInUp 0.7s ease-in-out;
+    transition: all 0.3s ease;
+}
+
+main h2 {
+    color: #0288d1;
+    font-size: 2.3rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 4px solid #0288d1;
+    padding-bottom: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+main li {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+main pre {
+    background: #eceff1;
+    padding: 1.5rem;
+    border-radius: 12px;
+    overflow-x: auto;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Кнопки */
+a.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #0288d1, #01579b);
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+a.btn:hover {
+    background: linear-gradient(135deg, #0277bd, #013a63);
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+a.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: transform 0.4s ease;
+    z-index: 0;
+}
+
+a.btn:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #01579b;
+    color: #fff;
+    font-size: 1.2rem;
+    box-shadow: 0 -8px 15px rgba(0, 0, 0, 0.3);
+    margin-top: auto;
+}
+
+footer a {
+    color: #e1f5fe;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Анимации */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
